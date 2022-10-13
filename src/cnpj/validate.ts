@@ -1,5 +1,5 @@
 const isAllDigitsTheSame = (digits: string) => {
-  return digits.split("").every((currentValue, _, array) => {
+  return digits.split('').every((currentValue, _, array) => {
     return currentValue === array[0];
   });
 };
@@ -23,9 +23,9 @@ const isVerifyingDigitValid = (digits: string, digit: number) => {
 };
 
 export const validate = (value: string) => {
-  value = value.replace(/\D/g, "");
+  value = value.replace(/\D/g, '');
 
-  if (value === "") {
+  if (value === '') {
     return false;
   }
 
