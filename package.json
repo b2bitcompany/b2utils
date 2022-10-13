@@ -1,9 +1,13 @@
 {
   "name": "b2utils",
   "version": "0.0.1",
-  "main": "dist/index.js",
   "repository": "https://github.com/b2bitcompany/b2utils.git",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "prepare": "husky install",
     "prettier-format": "prettier --config .prettierrc \"src/**/*.{ts}\" --write",
