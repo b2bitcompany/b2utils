@@ -1,0 +1,14 @@
+{
+  "name": "b2utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/b2bitcompany/b2utils.git",
+  "author": "Vinicius Santos <vinicius@b2bit.company>",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^0.24.1"
+  }
+}
