@@ -1,8 +1,4 @@
-const isAllDigitsTheSame = (digits: string) => {
-  return digits.split('').every((currentValue, _, array) => {
-    return currentValue === array[0];
-  });
-};
+import { isAllDigitsTheSame } from '../helpers';
 
 const isVerifyingDigitValid = (digits: string, digit: number) => {
   const size = digits.length;
