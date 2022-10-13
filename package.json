@@ -1,9 +1,8 @@
 {
   "name": "b2utils",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "repository": "https://github.com/b2bitcompany/b2utils.git",
-  "author": "Vinicius Santos <vinicius@b2bit.company>",
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
