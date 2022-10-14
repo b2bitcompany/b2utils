@@ -1,2 +1,2 @@
-export * from './validate';
 export * from './mask';
+export * from './validate';
