@@ -30,4 +30,8 @@ describe('mask phone', () => {
   it('should 558498 be transform 55849-8', () => {
     expect(mask('558498')).equal('55849-8');
   });
+
+  it('should 55849 not be changed', () => {
+    expect(mask('55849')).equal('55849');
+  });
 });

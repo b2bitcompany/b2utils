@@ -22,4 +22,8 @@ describe('validate CPF helper', () => {
   it('should 111.111.111 not be valid', () => {
     expect(validate('111.111.111')).toBeFalsy();
   });
+
+  it('should 140.875.110-32 be valid', () => {
+    expect(validate('140.875.110-32')).toBeFalsy();
+  });
 });

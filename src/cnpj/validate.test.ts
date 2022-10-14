@@ -22,4 +22,8 @@ describe('validate CNPJ', () => {
   it('should 11.111.111 not be valid', () => {
     expect(validate('11.111.111')).toBeFalsy();
   });
+
+  it('should 98.497.228/0001-04 be valid', () => {
+    expect(validate('97.497.228/0001-04')).toBeFalsy();
+  });
 });
