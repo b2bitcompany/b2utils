@@ -14,11 +14,13 @@
     "prepare": "husky install",
     "prettier-format": "prettier --config .prettierrc \"src/**/*.{ts}\" --write",
     "lint": "eslint . --ext .ts",
-    "test": "vitest"
+    "test": "vitest",
+    "test:coverage": "yarn test run --coverage"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
+    "@vitest/coverage-c8": "^0.24.1",
     "eslint": "^8.25.0",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
