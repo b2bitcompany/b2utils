@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublish": "yarn test run && yarn build",
+    "prepublishOnly": "yarn test run && yarn build",
     "prepare": "husky install",
     "prettier-format": "prettier --config .prettierrc \"src/**/*.{ts}\" --write",
     "lint": "eslint . --ext .ts",
