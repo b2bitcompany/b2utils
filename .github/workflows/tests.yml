@@ -1,4 +1,8 @@
 name: testWorkflow
+on:
+  push:
+    branches:
+      - '*'
 jobs:
   runTests:
     name: 'runTests'
