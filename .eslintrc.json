@@ -13,6 +13,7 @@
   "rules": {
     "@typescript-eslint/no-unused-vars": ["error"],
     "@typescript-eslint/ban-ts-comment": ["warn"],
-    "no-console": "warn"
+    "no-console": "warn",
+    "@typescript-eslint/no-explicit-any": ["off"]
   }
 }
