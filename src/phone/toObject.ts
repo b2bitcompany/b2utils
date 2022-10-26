@@ -8,7 +8,6 @@ export const toObject = (phone: string) => {
   const phoneWithoutMask = phone.replace(/\D/g, '');
 
   if (phoneWithoutMask.length === 9) {
-    console.log('phoneWithoutMask.length === 9');
     return {
       number: phoneWithoutMask,
     };
@@ -16,14 +15,14 @@ export const toObject = (phone: string) => {
 
   if (phoneWithoutMask.length === 11) {
     return {
-      countryCode: phoneWithoutMask.substring(0, 2),
+      areaCode: phoneWithoutMask.substring(0, 2),
       number: phoneWithoutMask.substring(2),
     };
   }
 
   return {
-    areaCode: phoneWithoutMask.substring(0, 2),
-    countryCode: phoneWithoutMask.substring(2, 4),
+    countryCode: phoneWithoutMask.substring(0, 2),
+    areaCode: phoneWithoutMask.substring(2, 4),
     number: phoneWithoutMask.substring(4),
   };
 };
