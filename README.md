@@ -56,6 +56,14 @@ cpf.validate('1418751103'); // false
 cpf.validate('141.875.110-33'); // false
 ```
 
+### CURRENCY
+
+```ts
+import { currency } from 'b2utils';
+
+currency.centsToBrl(100); // R$ 1,00
+```
+
 ### Phone
 
 ```ts
