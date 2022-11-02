@@ -44,4 +44,10 @@ describe('generate array with the content of the object', () => {
       'invalid cep2',
     ]);
   });
+
+  it('should string return array with the string', () => {
+    expect(transformObjectInArray('invalid cpf')).toStrictEqual([
+      'invalid cpf',
+    ]);
+  });
 });
