@@ -50,4 +50,17 @@ describe('generate array with the content of the object', () => {
       'invalid cpf',
     ]);
   });
+
+  it('should nested object with array with object values work', () => {
+    const obj = {
+      items: [
+        {
+          item1: {
+            item1Erro: ['Error 1'],
+          },
+        },
+      ],
+    };
+    expect(transformObjectInArray(obj)).toStrictEqual(['Error 1']);
+  });
 });

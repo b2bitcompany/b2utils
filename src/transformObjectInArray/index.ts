@@ -3,8 +3,16 @@ export const transformObjectInArray = (obj: any) => {
     return [obj];
   }
 
-  const nestedMessages = Object.values(obj).map((value: any) => {
+  const nestedMessages: Array<any> = Object.values(obj).map((value: any) => {
     if (Array.isArray(value)) {
+      if (
+        value.some((value) => {
+          return typeof value == 'object';
+        })
+      ) {
+        return value.flatMap((a) => transformObjectInArray(a));
+      }
+
       return value;
     }
 
@@ -15,17 +23,5 @@ export const transformObjectInArray = (obj: any) => {
     return value;
   });
 
-  const data: Array<string> = [];
-
-  nestedMessages.forEach((item) => {
-    if (Array.isArray(item)) {
-      item.forEach((nestedItem) => {
-        data.push(nestedItem);
-      });
-    } else {
-      data.push(item);
-    }
-  });
-
-  return data;
+  return nestedMessages.flat();
 };
