@@ -27,7 +27,7 @@ describe('mask phone', () => {
     expect(mask('88776655')).equal('8877-6655');
   });
 
-  it('should 8877665 be transform 8877-665', () => {
+  it('should 8877665 be transform 8877665', () => {
     expect(mask('8877665')).equal('8877-665');
   });
 
