@@ -13,7 +13,7 @@ export const toObject = (phone: string) => {
     };
   }
 
-  if (phoneWithoutMask.length === 11) {
+  if (phoneWithoutMask.length === 10 || phoneWithoutMask.length === 11) {
     return {
       areaCode: phoneWithoutMask.substring(0, 2),
       number: phoneWithoutMask.substring(2),
