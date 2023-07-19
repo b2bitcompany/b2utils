@@ -7,7 +7,7 @@ export const toObject = (phone: string) => {
 
   const phoneWithoutMask = phone.replace(/\D/g, '');
 
-  if (phoneWithoutMask.length === 9) {
+  if (phoneWithoutMask.length === 8 || phoneWithoutMask.length === 9) {
     return {
       number: phoneWithoutMask,
     };

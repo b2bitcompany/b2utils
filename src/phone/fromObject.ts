@@ -15,8 +15,8 @@ export const fromObject = ({ countryCode, areaCode, number }: Phone) => {
     throw new Error('Invalid area code, must have 2 digits');
   }
 
-  if (number.length !== 9) {
-    throw new Error('Invalid number, must have 9 digits');
+  if (number.length < 8 || number.length > 9) {
+    throw new Error('Invalid number, must have 8 or 9 digits');
   }
 
   return mask(`${countryCode}${areaCode}${number}`);
