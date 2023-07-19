@@ -39,13 +39,19 @@ describe('transform object into phone number', () => {
     });
   });
 
-  it('should transform phone without mask and only the number into object', () => {
+  it('should transform phone without mask and only 9 numbers into object', () => {
     expect(toObject('988776655')).toEqual({
       number: '988776655',
     });
   });
 
+  it('should transform phone without mask and only 8 numbers into object', () => {
+    expect(toObject('88776655')).toEqual({
+      number: '88776655',
+    });
+  });
+
   it('should throw error if phone is invalid', () => {
-    expect(() => toObject('98877665')).toThrow('Invalid phone');
+    expect(() => toObject('8877665')).toThrow('Invalid phone');
   });
 });
