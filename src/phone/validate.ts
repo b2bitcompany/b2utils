@@ -5,5 +5,5 @@ export const validate = (value: string) => {
     return false;
   }
 
-  return [9, 11, 13].includes(value.length);
+  return [8, 9, 11, 13].includes(value.length);
 };

@@ -3,20 +3,36 @@ import { describe, it, expect } from 'vitest';
 import { fromObject } from './fromObject';
 
 describe('convert phone object on formatted string', () => {
-  it('should return formatted phone with country and area code', () => {
+  it('should return formatted phone with 9 digits, country and area code', () => {
     expect(
       fromObject({ countryCode: '55', areaCode: '84', number: '988776655' })
     ).toBe('+55 (84) 98877-6655');
   });
 
-  it('should return formatted phone with area code', () => {
+  it('should return formatted phone with 8 digits, country and area code', () => {
+    expect(
+      fromObject({ countryCode: '55', areaCode: '84', number: '88776655' })
+    ).toBe('+55 (84) 8877-6655');
+  });
+
+  it('should return formatted phone with 9 digits and area code', () => {
     expect(fromObject({ areaCode: '84', number: '988776655' })).toBe(
       '(84) 98877-6655'
     );
   });
 
-  it('should return formatted phone only with the numbers', () => {
+  it('should return formatted phone with 8 digits and area code', () => {
+    expect(fromObject({ areaCode: '84', number: '88776655' })).toBe(
+      '(84) 8877-6655'
+    );
+  });
+
+  it('should return formatted phone only with the 9 numbers', () => {
     expect(fromObject({ number: '988776655' })).toBe('98877-6655');
+  });
+
+  it('should return formatted phone only with the 8 numbers', () => {
+    expect(fromObject({ number: '88776655' })).toBe('8877-6655');
   });
 
   it('should throw error if country code is invalid', () => {
@@ -38,8 +54,8 @@ describe('convert phone object on formatted string', () => {
   });
 
   it('should throw error if number is invalid', () => {
-    expect(() => fromObject({ areaCode: '84', number: '98877665' })).toThrow(
-      'Invalid number, must have 9 digits'
+    expect(() => fromObject({ areaCode: '84', number: '8877665' })).toThrow(
+      'Invalid number, must have 8 or 9 digits'
     );
   });
 });
