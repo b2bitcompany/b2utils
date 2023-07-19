@@ -5,5 +5,5 @@ export const validate = (value: string) => {
     return false;
   }
 
-  return [8, 9, 11, 13].includes(value.length);
+  return value.length >= 8 && value.length <= 13;
 };
