@@ -1,6 +1,6 @@
 {
   "name": "b2utils",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "repository": "https://github.com/b2bitcompany/b2utils.git",
   "license": "MIT",
   "main": "dist/index.js",
