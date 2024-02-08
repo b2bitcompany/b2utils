@@ -23,7 +23,7 @@ $ yarn add b2utils
 ```ts
 import { cep } from 'b2utils';
 
-cep.mask('12345678'); // 12.345-678
+cep.mask('12345678'); // 12345-678
 
 cep.validate('12345678'); // true
 cep.validate('12.345-678'); // true
